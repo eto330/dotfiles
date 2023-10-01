@@ -1,4 +1,4 @@
-# If you come from bash you might have to change your $PATH.
+## If you come from bash you might have to change your $PATH.
 export PATH=$HOME/bin:/usr/local/bin:$PATH
 
 # Path to your oh-my-zsh installation.
@@ -9,7 +9,7 @@ export PATH=~/.local/bin:/snap/bin:/usr/sandbox/:/usr/local/bin:/usr/bin:/bin:/u
 # to know which specific one was loaded, run: echo $RANDOM_THEME
 # See https://github.com/ohmyzsh/ohmyzsh/wiki/Themes
 ZSH_THEME="robbyrussell"
-#gallois, cypher crcandy
+#gallois, cypher crcandy dst rubbyrussell
 alias l='ls -l'
 alias l='ls -a'
 alias v='/home/bob/nvim-linux64/bin/nvim'
@@ -81,7 +81,7 @@ COMPLETION_WAITING_DOTS="true"
 
 
 
-plugins=( vi-mode ufw nmap systemadmin  tmux 
+plugins=( taskwarrior vi-mode ufw nmap systemadmin  tmux 
 tmuxinator )
 source $ZSH/oh-my-zsh.sh
 
@@ -127,6 +127,6 @@ export LS_COLORS
 RED='\033[0;31m'
 NC='\033[0m' # No Color
 On_IPurple='\033[0;105m'
-echo "[you have an appoinment in 3 months((${On_IPurple}September${NC}))]"
+echo "[you have an appoinment in 3 months((${On_IPurple}December${NC}))]"
 
 export GIT_DISCOVERY_ACROSS_FILESYSTEM=1

@@ -66,7 +66,7 @@ o.swapfile = false
 -- Remember 50 items in commandline history
 o.history = 50
 
-vim.cmd.colorscheme('NeoSolarized')
+vim.cmd.colorscheme('sunset_cloud')
 
 g.netrw_banner = 0
 g.netrw_liststyle = 3
