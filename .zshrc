@@ -16,7 +16,7 @@ alias v='/home/bob/nvim-linux64/bin/nvim'
 alias vim='/home/bob/nvim-linux64/bin/nvim'
 alias vi='/home/bob/nvim-linux64/bin/nvim'
 alias code='codium'
-alias t='tmux'
+alias tm='tmux'
 alias config='/usr/bin/git --git-dir=$HOME/dotfiles/ --work-tree=$HOME'
 # Set list of themes to pick from when loading at random
 # Setting this variable when ZSH_THEME=random will cause zsh to load
@@ -53,7 +53,7 @@ ENABLE_CORRECTION="true"
 
 # Uncomment the following line to display red dots whilst waiting for completion.
 # You can also set it to another string to have that shown instead of the default red dots.
-# e.g. COMPLETION_WAITING_DOTS="%F{yellow}waiting...%f"
+# e.g. COMPLETION_WAITING_DOTS="%F{}waiting...%f"
 # Caution: this setting can cause issues with multiline prompts in zsh < 5.7.1 (see #5765)
 COMPLETION_WAITING_DOTS="true"
 
@@ -129,4 +129,3 @@ NC='\033[0m' # No Color
 On_IPurple='\033[0;105m'
 echo "[you have an appoinment in 3 months((${On_IPurple}December${NC}))]"
 
-export GIT_DISCOVERY_ACROSS_FILESYSTEM=1

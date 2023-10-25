@@ -20,9 +20,8 @@ o.termguicolors = true
 -- Decrease update time
 o.timeoutlen = 500
 o.updatetime = 200
-
 -- Number of screen lines to keep above and below the cursor
-o.scrolloff = 8
+o.scrolloff = 8 
 
 -- Better editor UI
 o.number = true
@@ -30,12 +29,13 @@ o.numberwidth = 5
 o.relativenumber = true
 o.signcolumn = 'yes:2'
 o.cursorline = true
-
+vim.o.magic = 'very'
+vim.g.magic = 'very'
 -- Better editing experience
 o.expandtab = true
--- o.smarttab = true
+o.smarttab = true
 o.cindent = true
--- o.autoindent = true
+o.autoindent = true
 o.wrap = true
 o.textwidth = 300
 o.tabstop = 4
@@ -67,13 +67,12 @@ o.swapfile = false
 o.history = 50
 
 vim.cmd.colorscheme('sunset_cloud')
-
+vim.api.nvim_command('highlight Search guifg=black guibg=yellow')
 g.netrw_banner = 0
 g.netrw_liststyle = 3
 g.netrw_browse_split = 4
 g.netrw_altv = 1
 g.netrw_winsize = 12
-
 -- Better buffer splitting
 o.splitright = true
 o.splitbelow = true 
