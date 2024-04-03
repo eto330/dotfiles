@@ -1,3 +1,10 @@
+# Enable Powerlevel10k instant prompt. Should stay close to the top of ~/.zshrc.
+# Initialization code that may require console input (password prompts, [y/n]
+# confirmations, etc.) must go above this block; everything else may go below.
+if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]; then
+  source "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh"
+fi
+
 ## If you come from bash you might have to change your $PATH.
 export PATH=$HOME/bin:/usr/local/bin:$PATH
 
@@ -8,15 +15,31 @@ export PATH=~/.local/bin:/snap/bin:/usr/sandbox/:/usr/local/bin:/usr/bin:/bin:/u
 # load a random theme each time oh-my-zsh is loaded, in which case,
 # to know which specific one was loaded, run: echo $RANDOM_THEME
 # See https://github.com/ohmyzsh/ohmyzsh/wiki/Themes
-ZSH_THEME="robbyrussell"
-#gallois, cypher crcandy dst rubbyrussell
+ZSH_THEME="alanpeabody"
+#gallois, cypher crcandy dst robbyrussell"powerlevel10k/powerlevel10k" Powerlevel10k Ubuntu Ubuntu Zsh
 alias l='ls -l'
 alias l='ls -a'
-alias v='/home/bob/nvim-linux64/bin/nvim'
-alias vim='/home/bob/nvim-linux64/bin/nvim'
-alias vi='/home/bob/nvim-linux64/bin/nvim'
+#alias v='/home/bob/nvim-linux64/bin/nvim'
+#alias vim='/home/bob/nvim-linux64/bin/nvim'
+#alias vi='/home/bob/nvim-linux64/bin/nvim'
 alias code='codium'
+alias please='sudo'
 alias tm='tmux'
+alias f='dirs=cd $(find .  -type d | fzf)'
+alias se='tgpt'
+alias k='kubectl'
+alias h='helm'
+alias startstack='localstack start -d'
+alias stopstack='localstack stop'
+alias minikubestart='minikube start'
+alias minikubestop'minikube stop'
+alias aws-env='source ~/personal/python-project/sysadmin-projects/aws-env/bin/activate'
+alias vim='nvim'
+alias vi='nvim'
+alias v='nvim'
+alias pyactivate='source ~/personal/python-project/sysadmin-projects/admin-scripts-env/bin/activate'
+
+
 alias config='/usr/bin/git --git-dir=$HOME/dotfiles/ --work-tree=$HOME'
 # Set list of themes to pick from when loading at random
 # Setting this variable when ZSH_THEME=random will cause zsh to load
@@ -82,7 +105,8 @@ COMPLETION_WAITING_DOTS="true"
 
 
 plugins=( taskwarrior vi-mode ufw nmap systemadmin  tmux 
-tmuxinator )
+          git tmuxinator  kubectl minikube helm 
+)
 source $ZSH/oh-my-zsh.sh
 
 # User configuration
@@ -122,10 +146,11 @@ export LS_COLORS
 #   docker run -it --rm brandoncc/vim-be-good:stable
 #
 #
-#
-
-RED='\033[0;31m'
-NC='\033[0m' # No Color
-On_IPurple='\033[0;105m'
-echo "[you have an appoinment in 3 months((${On_IPurple}December${NC}))]"
-
+# RED='\033[0;31m'
+# NC='\033[0m' # No Color
+# On_IPurple='\033[0;105m'
+# To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
+# [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
+# echo "[you have an appoinment in 3 months((${On_IPurple}March${NC}))]"
+eval "$(starship init zsh)"
+#ulimit -c 0

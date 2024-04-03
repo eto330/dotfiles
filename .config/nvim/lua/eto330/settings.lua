@@ -8,10 +8,9 @@ vim.api.nvim_command([[
 ]])
 
 vim.api.nvim_command('let g:vim_be_good_delete_me_offset = 35')
--- cmd('syntax on')
 -- vim.api.nvim_command('filetype plugin indent on')
 o.termguicolors = true
--- o.background = 'dark'
+o.background = 'dark'
 
 --vim.api.nvim_command('set colorcolumn=85')
 -- Do not save when switching buffers
@@ -29,8 +28,6 @@ o.numberwidth = 5
 o.relativenumber = true
 o.signcolumn = 'yes:2'
 o.cursorline = true
-vim.o.magic = 'very'
-vim.g.magic = 'very'
 -- Better editing experience
 o.expandtab = true
 o.smarttab = true
@@ -66,11 +63,12 @@ o.swapfile = false
 -- Remember 50 items in commandline history
 o.history = 50
 
-vim.cmd.colorscheme('sunset_cloud')
+vim.cmd.colorscheme('solarized-osaka')
+vim.api.nvim_command('highlight Comment guibg=#333333 guifg=#b58900')
 vim.api.nvim_command('highlight Search guifg=black guibg=yellow')
 g.netrw_banner = 0
 g.netrw_liststyle = 3
-g.netrw_browse_split = 4
+g.netrw_browse_split =0 
 g.netrw_altv = 1
 g.netrw_winsize = 12
 -- Better buffer splitting
@@ -79,4 +77,3 @@ o.splitbelow = true
 vim.g.do_filetype_lua = 1
 g.mapleader = ' '
 g.maplocalleader = ' '
-vim.api.nvim_command('hi Comment guifg=#859900')

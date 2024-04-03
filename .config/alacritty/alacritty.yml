@@ -1,3 +1,4 @@
+
 # Configuration for Alacritty, the GPU enhanced terminal emulator.
 
 # Any items in the `env` entry below will be added as
@@ -110,12 +111,6 @@ font:
 # If `true`, bold text is drawn using the bright color variants.
 draw_bold_text_with_bright_colors: false
 
-# Colors (Tomorrow Night Bright)
-colors:
-  # Default colors
-  primary:
-    background: '#000000'
-    foreground: '#d8dee9'
 
     # Bright and dim foreground colors
     #
@@ -129,21 +124,6 @@ colors:
   #
   # Colors which should be used to draw the terminal cursor. If these are unset,
   # the cursor color will be the inverse of the cell color.
-  cursor:
-    text: '#191919'
-    cursor: '#d8dee9'
-
-  vi_mode_cursor:
-    text: CellBackground
-    cursor: CellForeground
-  # Selection colors
-
-  # Colors which should be used to draw the selection area. If selection
-  # background is unset, selection color will be the inverse of the cell colors.
-  # If only text is unset the cell text color will remain the same.
-  selection:
-    text: '#191919'
-    background: '#d8dee9'
 
   # Normal colors
 schemes:
@@ -152,64 +132,6 @@ schemes:
 
 # Cyberpunk-Neon colours
 # Kanagawa Alacritty Colors
-  dragon: &dragon 
-    # Default colors
-    primary:
-      background: '0x0c0c16'
-      foreground: '0xd8dee9'
-
-    # Normal colors
-    normal:
-      black:   '0x2c2c3d'
-      red:     '0xff6e6e'
-      green:   '0x9ec875'
-      yellow:  '0xffa759'
-      blue:    '0x70a7d4'
-      magenta: '0xd291e0'
-      cyan:    '0x96e0e0'
-      white:   '0xd8dee9'
-
-    # Bright colors
-    bright:
-      black:   '0x414166'
-      red:     '0xff8d8d'
-      green:   '0xb3d987'
-      yellow:  '0xffc57f'
-      blue:    '0x9bb3d3'
-      magenta: '0xffa1ff'
-      cyan:    '0x9cd8d8'
-      white:   '0xffffff'
-colors: *dragon
-  # Indexed Colors
-  #
-  # The indexed colors include all colors from 16 to 256.
-  # When these are not set, they're filled with sensible defaults.
-  #
-  # Example:
-  #   `- { index: 16, color: '#ff00ff' }`
-  #
-  #indexed_colors: [{ index: 16, color: '#ff00ff' }]
-
-# Visual Bell
-#
-# Any time the BEL code is received, Alacritty "rings" the visual bell. Once
-# rung, the terminal background will be set to white and transition back to the
-# default background color. You can control the rate of this transition by
-# setting the `duration` property (represented in milliseconds). You can also
-# configure the transition function by setting the `animation` property.
-#
-# Values for `animation`:
-#   - Ease
-#   - EaseOut
-#   - EaseOutSine
-#   - EaseOutQuad
-#   - EaseOutCubic
-#   - EaseOutQuart
-#   - EaseOutQuint
-#   - EaseOutExpo
-#   - EaseOutCirc
-#   - Linear
-#
 # Specifying a `duration` of `0` will disable the visual bell.
 bell:
   animation: EaseOutExpo
@@ -220,8 +142,8 @@ bell:
 #
 # Window opacity as a floating point number from `0.0` to `1.0`.
 # The value `0.0` is completely transparent and `1.0` is opaque.
-background_opacity: 0.8 
-
+window:
+  opacity: 0.8
 selection:
   semantic_escape_chars: ",│`|:\"' ()[]{}<>\t"
 
@@ -231,7 +153,7 @@ selection:
 # Allow terminal applications to change Alacritty's window title.
 
 cursor:
-  style: Underline
+  style: Block
 
   # If this is `true`, the cursor will be rendered as a hollow box when the
   # window is not focused.
@@ -465,13 +387,44 @@ key_bindings:
   - { key: N,                           mode: Vi, action: SearchNext              }
   - { key: N,      mods: Shift,         mode: Vi, action: SearchPrevious          }
 
+colors:
+  transparent_background_colors: true
+
+
+  primary:
+    background: '#000000'
+    foreground: '#d8dee9'
+
+  # Normal colors
+  normal:
+    black: '0x000000'
+    red: '0xec8e2c'
+    green: '0x58a6ff'
+    yellow: '0xd29922'
+    blue: '0x58a6ff'
+    magenta: '0xbc8cff'
+    cyan: '0x39c5cf'
+    white: '0xb1bac4'
+
+  # Bright colors
+  bright:
+    black: '0x6e7681'
+    red: '0xfdac54'
+    green: '0x79c0ff'
+    yellow: '0xe3b341'
+    blue: '0x79c0ff'
+    magenta: '0xbc8cff'
+    cyan: '0x39c5cf'
+    white: '0xb1bac4'
+
+
+
 debug:
   # Display the time it takes to redraw each frame.
   render_timer: false
 
   # Keep the log file after quitting Alacritty.
   persistent_logging: false
-
   # Log level
   #
   # Values for `log_level`:
