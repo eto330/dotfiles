@@ -151,6 +151,5 @@ export LS_COLORS
 # On_IPurple='\033[0;105m'
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 # [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
-# echo "[you have an appoinment in 3 months((${On_IPurple}March${NC}))]"
 eval "$(starship init zsh)"
 #ulimit -c 0
