@@ -1,0 +1,36 @@
+# ~/.config/starship.toml
+
+# Use custom format
+
+# Wait 10 milliseconds for starship to check files under the current directory.
+scan_timeout = 10
+
+# Disable the blank line at the start of the prompt
+add_newline = false
+
+# Set 'foo' as custom color palette
+palette = 'foo'
+
+# Define custom colors
+[palettes.foo]
+
+# Overwrite existing color
+blue = '21'
+
+# Define new color
+mustard = '#af8700'
+
+[line_break]
+disabled = true
+
+
+[memory_usage]
+disabled = false
+threshold = -1
+symbol = ' '
+style = 'bold dimmed green'
+
+# ~/.config/starship.toml
+
+[container]
+format = '[$symbol \[$name\]]($style) '

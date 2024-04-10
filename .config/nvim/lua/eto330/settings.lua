@@ -4,14 +4,14 @@ local o = vim.o
 vim.api.nvim_command([[
   augroup ChangeBackgroudColour
   autocmd colorscheme * :hi normal guibg=None
-  augroup END
+   augroup END
 ]])
 
 vim.api.nvim_command('let g:vim_be_good_delete_me_offset = 35')
--- vim.api.nvim_command('filetype plugin indent on')
+vim.api.nvim_command('set nowrap')
+vim.api.nvim_command('filetype plugin indent on')
 o.termguicolors = true
 o.background = 'dark'
-
 --vim.api.nvim_command('set colorcolumn=85')
 -- Do not save when switching buffers
 -- o.hidden = true
@@ -20,7 +20,7 @@ o.background = 'dark'
 o.timeoutlen = 500
 o.updatetime = 200
 -- Number of screen lines to keep above and below the cursor
-o.scrolloff = 8 
+o.scrolloff = 8
 
 -- Better editor UI
 o.number = true
@@ -66,6 +66,8 @@ o.history = 50
 vim.cmd.colorscheme('solarized-osaka')
 vim.api.nvim_command('highlight Comment guibg=#333333 guifg=#b58900')
 vim.api.nvim_command('highlight Search guifg=black guibg=yellow')
+-- vim.api.nvim_command('highlight LineNr guifg=#b0b0b0')
+vim.api.nvim_command('set nowrap')
 g.netrw_banner = 0
 g.netrw_liststyle = 3
 g.netrw_browse_split =0 
@@ -74,6 +76,6 @@ g.netrw_winsize = 12
 -- Better buffer splitting
 o.splitright = true
 o.splitbelow = true 
-vim.g.do_filetype_lua = 1
+g.do_filetype_lua = 1
 g.mapleader = ' '
 g.maplocalleader = ' '

@@ -8,7 +8,8 @@
 # i3 config file (v4)
 #
 # Please see https://i3wm.org/docs/userguide.html for a complete reference!
-
+set $first_mon DP-2-3
+set $second_mon DP-2-3
 
 # Nordic colors.
 set $black      #191D24
@@ -64,7 +65,7 @@ floating_modifier $mod
 bindsym $mod+Return exec /usr/bin/alacritty
 
 # start the browser
-bindsym $mod+b exec firefox
+bindsym $mod+b exec google-chrome
 
 
 set $fn eDP-1
@@ -120,7 +121,7 @@ bindsym XF86MonBrightnessDown exec --no-startup-id brightnessctl set 10%- && not
 
 
 # audio
-bindsym $mod+Ctrl+m exec alacritty -e 'alsamixer'
+bindsym $mod+u exec alacritty -e 'alsamixer'
 # change container layout (stacked, tabbed, toggle split)
 bindsym $mod+s layout stacking
 bindsym $mod+w layout tabbed
@@ -180,7 +181,8 @@ bindsym $mod+Shift+c reload
 # restart i3 inplace (preserves your layout/session, can be used to upgrade i3)
 bindsym $mod+Shift+r restart
 # exit i3 (logs you out of your X session)
-bindsym $mod+Shift+e exec "i3-nagbar -t warning -m 'Do you really want to exit i3? This will end your X session.' -B 'Yes, exit i3' 'i3-msg exit'"
+#bindsym $mod+Shift+e exec "i3-nagbar -t warning -m 'Do you really want to exit i3? This will end your X session.' -B 'Yes, exit i3' 'i3-msg exit'"
+bindsym $Mod+Shift+e exec "i3-msg exit"
 
 # resize window (you can also use the mouse for that)
 mode "resize" {
