@@ -14,7 +14,7 @@ function(use)
     use 'rockerBOO/boo-colorscheme-nvim'
     use ('Tsuzat/NeoSolarized.nvim')
     use ("craftzdog/solarized-osaka.nvim")
-
+    use("tpope/vim-fugitive")
     use {
         'nvim-telescope/telescope.nvim', tag = '0.1.6',
         -- or                            , branch = '0.1.x',
