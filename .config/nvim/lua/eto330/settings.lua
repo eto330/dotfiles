@@ -3,7 +3,7 @@ local o = vim.o
 
 vim.api.nvim_command([[
   augroup ChangeBackgroudColour
-  autocmd colorscheme * :hi normal guibg=None
+  autocmd colorscheme * :hi normal guibg=#080808
    augroup END
 ]])
 
@@ -63,7 +63,7 @@ o.swapfile = false
 -- Remember 50 items in commandline history
 o.history = 50
 
-vim.cmd.colorscheme('solarized-osaka')
+vim.cmd.colorscheme('sunset_cloud')
 vim.api.nvim_command('highlight Comment guibg=#333333 guifg=#b58900')
 vim.api.nvim_command('highlight Search guifg=black guibg=yellow')
 -- vim.api.nvim_command('highlight LineNr guifg=#b0b0b0')
@@ -79,3 +79,14 @@ o.splitbelow = true
 g.do_filetype_lua = 1
 g.mapleader = ' '
 g.maplocalleader = ' '
+
+vim.api.nvim_create_autocmd('TextYankPost', {
+  group = vim.api.nvim_create_augroup('highlight_yank', {}),
+  desc = 'Hightlight selection on yank',
+  pattern = '*',
+  callback = function()
+    vim.highlight.on_yank { higroup = 'IncSearch', timeout = 150 }
+  end,
+})
+
+

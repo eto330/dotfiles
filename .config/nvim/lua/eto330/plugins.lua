@@ -15,9 +15,8 @@ function(use)
     use ('Tsuzat/NeoSolarized.nvim')
     use ("craftzdog/solarized-osaka.nvim")
 
-    use ( 'Exafunction/codeium.vim')
     use {
-        'nvim-telescope/telescope.nvim', tag = '0.1.',
+        'nvim-telescope/telescope.nvim', tag = '0.1.6',
         -- or                            , branch = '0.1.x',
         requires = { {'nvim-lua/plenary.nvim'} }
     }

@@ -65,7 +65,7 @@ floating_modifier $mod
 bindsym $mod+Return exec /usr/bin/alacritty
 
 # start the browser
-bindsym $mod+b exec google-chrome
+bindsym $mod+b exec firefox
 
 
 set $fn eDP-1
