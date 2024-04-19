@@ -62,10 +62,10 @@ font pango:DejaVu Sans Mono 8
 floating_modifier $mod
 
 # start a terminal
-bindsym $mod+Return exec /usr/bin/alacritty -o font.size=12
+bindsym $mod+Return exec /usr/bin/alacritty -o font.size=14
 
 # start the browser
-bindsym $mod+b exec firefox
+bindsym $mod+b exec google-chrome
 
 
 set $fn eDP-1
@@ -116,8 +116,8 @@ bindsym $mod+m fullscreen toggle
 
 
 # Backlight control
-bindsym XF86MonBrightnessUp   exec --no-startup-id brightnessctl set +10% && notify-send --urgency=low -r 9999 "󰃠  Brightness: $((($(brightnessctl g)*100)/$(brightnessctl m)))%"
-bindsym XF86MonBrightnessDown exec --no-startup-id brightnessctl set 10%- && notify-send --urgency=low -r 9999 "󰃠  Brightness: $((($(brightnessctl g)*100)/$(brightnessctl m)))%"
+bindsym $mod+Shift+o   exec --no-startup-id brightnessctl set +10% && notify-send --urgency=low -r 9999 "󰃠  Brightness: $((($(brightnessctl g)*100)/$(brightnessctl m)))%"
+bindsym $mod+Shift+i   exec --no-startup-id brightnessctl set 10%- && notify-send --urgency=low -r 9999 "󰃠  Brightness: $((($(brightnessctl g)*100)/$(brightnessctl m)))%"
 
 
 # audio

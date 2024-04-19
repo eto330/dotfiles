@@ -19,19 +19,15 @@ map('n','<leader>gp', ':G push<CR>')
 map('n','<C-s>', ':Ex<CR>')
 map('n','m', '')
 map('n',"'", "'")
-
+vim.keymap.set("n", "-", "<CMD>Oil<CR>", { desc = "Open parent directory" })
 map('v','J', ":m '>+1<CR>gv=gv")
 map('v','K', ":m '>-2<CR>gv=gv")
 
 require('Comment').setup({
     ignore = '^$',
     opleader = {
-        line = '<leader>x',
+        line = '<C-f>',
     },
 })
 
 
--- vim.keymap.set('i', '<C-l>', function () return vim.fn['codeium#Accept']() end, { expr = true, silent = true })
--- vim.keymap.set('i', '<C-;>', function() return vim.fn['codeium#CycleCompletions'](1) end, { expr = true, silent = true })
--- vim.keymap.set('i', '<C-,>', function() return vim.fn['codeium#CycleCompletions'](-1) end, { expr = true, silent = true })
--- vim.keymap.set('i', '<C-x>', function() return vim.fn['codeium#Clear']() end, { expr = true, silent = true })

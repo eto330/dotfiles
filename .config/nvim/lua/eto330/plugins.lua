@@ -10,6 +10,8 @@ function(use)
     -- packer packer --
     ---------------------
     use('wbthomason/packer.nvim')
+
+    use ("stevearc/oil.nvim")
     use ('nvim-treesitter/nvim-treesitter', {run =  ':TSUpdate'})
     use 'rockerBOO/boo-colorscheme-nvim'
     use ('Tsuzat/NeoSolarized.nvim')
@@ -50,7 +52,6 @@ function(use)
               {'rafamadriz/friendly-snippets'},
           }
       }
-
 end)
 
 
