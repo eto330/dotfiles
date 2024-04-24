@@ -8,6 +8,7 @@ vim.api.nvim_command([[
 ]])
 
 vim.api.nvim_command('let g:vim_be_good_delete_me_offset = 35')
+vim.api.nvim_command('set jumpoptions+=view')
 vim.api.nvim_command('set nowrap')
 vim.api.nvim_command('filetype plugin indent on')
 o.termguicolors = true
@@ -63,19 +64,19 @@ o.swapfile = false
 -- Remember 50 items in commandline history
 o.history = 50
 
-vim.cmd.colorscheme('radioactive_waste')
-vim.api.nvim_command('highlight Comment guibg=#333333 guifg=#b58900')
+vim.cmd.colorscheme('sunset_cloud')
+--vim.api.nvim_command('highlight Comment guibg=#333333 guifg=#b58900')
 vim.api.nvim_command('highlight Search guifg=black guibg=yellow')
 -- vim.api.nvim_command('highlight LineNr guifg=#b0b0b0')
 vim.api.nvim_command('set nowrap')
 g.netrw_banner = 0
 g.netrw_liststyle = 3
-g.netrw_browse_split =0 
+g.netrw_browse_split = 0
 g.netrw_altv = 1
 g.netrw_winsize = 12
 -- Better buffer splitting
 o.splitright = true
-o.splitbelow = true 
+o.splitbelow = true
 g.do_filetype_lua = 1
 g.mapleader = ' '
 g.maplocalleader = ' '
@@ -88,5 +89,3 @@ vim.api.nvim_create_autocmd('TextYankPost', {
     vim.highlight.on_yank { higroup = 'IncSearch', timeout = 150 }
   end,
 })
-
-

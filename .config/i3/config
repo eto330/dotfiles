@@ -62,7 +62,7 @@ font pango:DejaVu Sans Mono 8
 floating_modifier $mod
 
 # start a terminal
-bindsym $mod+Return exec /usr/bin/alacritty -o font.size=16
+bindsym $mod+Return exec /usr/bin/alacritty -o font.size=14
 
 # start the browser
 bindsym $mod+b exec google-chrome

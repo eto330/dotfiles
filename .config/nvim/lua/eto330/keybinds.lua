@@ -5,10 +5,27 @@ end
 -- Fix n and N. Keeping foobar in center
 --
 --
+--
+map('n', '<leader>w', ':w<CR>')
+map('n', '<leader>q', ':q!<CR>')
+
+vim.keymap.set("v", "J", ":m '>+1<CR>gv=gv")
+vim.keymap.set("v", "K", ":m '<-2<CR>gv=gv")
+vim.keymap.set("n", "n", "nzzzv")
+vim.keymap.set("n", "N", "Nzzzv")
 map('n', 'n', 'nzz')
 map('n', 'N', 'Nzz')
-map('n','<leader>w', ':w<CR>')
-map('n','<leader>q', ':q!<CR>')
+
+-- greatest remap ever
+vim.keymap.set("x", "<leader>p", [["_dP]])
+
+-- next greatest remap ever : asbjornHaland
+vim.keymap.set({"n", "v"}, "<leader>y", [["+y]])
+vim.keymap.set("n", "<leader>Y", [["+Y]])
+
+-- useful for bash files
+vim.keymap.set("n", "<leader>x", "<cmd>!chmod +x %<CR>", { silent = true })
+
 map('n','<leader>h', ':wincmd h<CR>')
 map('n','<leader>j', ':wincmd j<CR>')
 map('n','<leader>k', ':wincmd k<CR>')
