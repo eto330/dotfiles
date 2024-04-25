@@ -9,7 +9,6 @@ export ZSH="$HOME/.oh-my-zsh"
 # to know which specific one was loaded, run: echo $RANDOM_THEME
 # See https://github.com/ohmyzsh/ohmyzsh/wiki/Themes
 ZSH_THEME="wuffers"
-
 # Set list of themes to pick from when loading at random
 # Setting this variable when ZSH_THEME=random will cause zsh to load
 # a theme from this variable instead of looking in $ZSH/themes/
@@ -113,7 +112,7 @@ alias l='ls --color=auto -la'
 alias ll='ls --color=auto -l'
 alias la='ls --color=auto -la'
 alias config='/usr/bin/git --git-dir=$HOME/dotfiles.git/ --work-tree=$HOME' 
-
+alias zl='/snap/bin/zellij' 
 alias tm='tmux'
 function f() {
     local DIR

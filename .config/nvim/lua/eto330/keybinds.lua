@@ -33,18 +33,11 @@ map('n','<leader>l', ':wincmd l<CR>')
 map('n','<leader>gg', ':G<CR>')
 map('n','<leader>gc', ':G commit<CR>')
 map('n','<leader>gp', ':G push<CR>')
-map('n','<C-s>', ':Ex<CR>')
 map('n','m', '')
 map('n',"'", "'")
-vim.keymap.set("n", "-", "<CMD>Oil<CR>", { desc = "Open parent directory" })
+vim.keymap.set("n", "-", ":Ex<CR>", { desc = "Open parent directory" })
 map('v','J', ":m '>+1<CR>gv=gv")
 map('v','K', ":m '>-2<CR>gv=gv")
 
-require('Comment').setup({
-    ignore = '^$',
-    opleader = {
-        line = '<C-f>',
-    },
-})
 
 
