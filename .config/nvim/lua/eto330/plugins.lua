@@ -4,25 +4,38 @@ return require("packer").startup(function(use)
     use('wbthomason/packer.nvim')
     use ('nvim-treesitter/nvim-treesitter', {run =  ':TSUpdate'})
     use 'rockerBOO/boo-colorscheme-nvim'
-    use ('Tsuzat/NeoSolarized.nvim')
-    use ("craftzdog/solarized-osaka.nvim")
+    use({
+        "folke/trouble.nvim",
+        config = function()
+            require("trouble").setup {
+                icons = false,
+                -- your configuration comes here
+                -- or leave it empty to use the default settings
+                -- refer to the configuration section below
+            }
+        end
+    })
     use("tpope/vim-fugitive")
     use {
         'nvim-telescope/telescope.nvim', tag = '0.1.6',
-        -- or                            , branch = '0.1.x',
         requires = { {'nvim-lua/plenary.nvim'} }
     }
     use('ThePrimeagen/harpoon')
     use {
-    'numToStr/Comment.nvim',
-    config = function()
-        require('Comment').setup()
-    end
+        'numToStr/Comment.nvim',
+        config = function()
+            require('Comment').setup()
+        end
     }
     use {
-          'VonHeikemen/lsp-zero.nvim',
-          branch = 'v1.x',
-          requires = {
+        'VonHeikemen/lsp-zero.nvim',
+        branch = 'v1.x',
+        requires = {
+
+              -- LSP Support
+              {'neovim/nvim-lspconfig'},
+              {'williamboman/mason.nvim'},
+              {'williamboman/mason-lspconfig.nvim'},
 
               -- Autocompletion
               {'hrsh7th/nvim-cmp'},
@@ -38,5 +51,3 @@ return require("packer").startup(function(use)
           }
       }
 end)
-
-

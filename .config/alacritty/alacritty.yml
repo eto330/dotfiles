@@ -326,9 +326,9 @@ mouse_bindings:
 # at once.
 key_bindings:
   # (Windows, Linux, and BSD only)
-  - { key: V,           mods: Alt,        action: Paste            }
+  - { key: P,           mods: Alt,        action: Paste            }
   - { key: Slash,    mods: Control,       chars: "gc"              }
-  - { key: C,           mods: Alt,        action: Copy}
+  - { key: Y,           mods: Alt,        action: Copy}
   - { key: Key0,     mods: Control,       action: ResetFontSize    }
   - { key: Equals,   mods: Control,       action: IncreaseFontSize }
   - { key: Plus,     mods: Control,       action: IncreaseFontSize }
