@@ -3,7 +3,10 @@
 
 # Path to your oh-my-zsh installation.
 export ZSH="$HOME/.oh-my-zsh"
-
+export PATH=/usr/sbin/:$PATH
+export PATH=/home/bob/bin:$PATH
+export DOCKER_HOST=unix:///run/user/1000/docker.sock
+# export DOCKER_HOST=unix:///run/user/1000/docker.sock
 # Set name of the theme to load --- if set to "random", it will
 # load a random theme each time oh-my-zsh is loaded, in which case,
 # to know which specific one was loaded, run: echo $RANDOM_THEME
@@ -124,3 +127,5 @@ function f() {
 
 
 # eval "$(starship init zsh)"
+export PATH=:/home/bob/bin:/usr/sbin/:/home/bob/bin:/usr/sbin/:/usr/local/bin:/usr/bin:/bin:/usr/local/games:/usr/games
+export DOCKER_HOST=unix:///run/user/1000/docker.sock
