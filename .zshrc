@@ -124,8 +124,6 @@ function f() {
     DIR=$(find . -type d | fzf)
     cd "$DIR" || return 1
 }
-
-
 # eval "$(starship init zsh)"
 export PATH=:/home/bob/bin:/usr/sbin/:/home/bob/bin:/usr/sbin/:/usr/local/bin:/usr/bin:/bin:/usr/local/games:/usr/games
 export DOCKER_HOST=unix:///run/user/1000/docker.sock
