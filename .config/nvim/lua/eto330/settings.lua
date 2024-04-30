@@ -67,6 +67,7 @@ o.history = 50
 vim.cmd.colorscheme('sunset_cloud')
 --vim.api.nvim_command('highlight Comment guibg=#333333 guifg=#b58900')
 vim.api.nvim_command('highlight Search guifg=black guibg=yellow')
+vim.api.nvim_command('highlight IncSearch guifg=black guibg=orange')
 -- vim.api.nvim_command('highlight LineNr guifg=#b0b0b0')
 vim.api.nvim_command('set nowrap')
 g.netrw_banner = 0

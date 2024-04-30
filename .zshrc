@@ -116,6 +116,7 @@ alias ll='ls --color=auto -l'
 alias la='ls --color=auto -la'
 alias config='/usr/bin/git --git-dir=$HOME/dotfiles.git/ --work-tree=$HOME' 
 alias tm='tmux'
+alias zl='/snap/bin/zellij'
 alias startvm="VBoxManage startvm {276da368-9624-4b49-838c-4c57920caad1} --type headless" 
 alias disablevm="VBoxManage controlvm {276da368-9624-4b49-838c-4c57920caad1} savestate" 
 
