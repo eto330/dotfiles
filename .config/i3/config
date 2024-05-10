@@ -65,7 +65,7 @@ floating_modifier $mod
 bindsym $mod+Return exec /usr/bin/alacritty -o font.size=14
 
 # start the browser
-bindsym $mod+b exec firefox-esr
+bindsym $mod+b exec google-chrome
 
 
 set $fn eDP-1
@@ -227,5 +227,4 @@ gaps outer 5px
 # finds out, if available)
 client.focused          #2e3436 #2e3436 #ffffff #2e3436   #2e3436
 exec_always --no-startup-id feh --bg-scale $HOME/Pictures/color-river.jpg
-#exec_always ~/.config/polybar/launch.sh &
-exec_always picom
+# exec_always picom

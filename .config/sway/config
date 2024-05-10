@@ -62,10 +62,10 @@ font pango:DejaVu Sans Mono 8
 floating_modifier $mod
 
 # start a terminal
-bindsym $mod+Return exec /usr/bin/alacritty -o font.size=14
+bindsym $mod+Return exec /usr/bin/alacritty -o font.size=17
 
 # start the browser
-bindsym $mod+b exec firefox-esr
+bindsym $mod+b exec firefox
 
 
 set $fn eDP-1

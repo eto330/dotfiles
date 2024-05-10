@@ -128,3 +128,5 @@ function f() {
 # eval "$(starship init zsh)"
 export PATH=:/home/bob/bin:/usr/sbin/:/home/bob/bin:/usr/sbin/:/usr/local/bin:/usr/bin:/bin:/usr/local/games:/usr/games
 export DOCKER_HOST=unix:///run/user/1000/docker.sock
+fastfetch  --logo-color-1 32 -l /home/bob/.config/fastfetch/bio-hazard.txt
+export DOCKER_CONTENT_TRUST=1
