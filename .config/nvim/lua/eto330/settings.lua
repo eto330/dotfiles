@@ -64,11 +64,11 @@ o.swapfile = false
 
 -- Remember 50 items in commandline history
 o.history = 50
-
 vim.cmd.colorscheme('gruvbuddy')
 --vim.api.nvim_command('highlight Comment guibg=#333333 guifg=#b58900')
 vim.api.nvim_command('highlight Search guifg=black guibg=yellow')
 vim.api.nvim_command('highlight IncSearch guifg=white guibg=red')
+vim.api.nvim_command('highlight Function gui=None')
 -- vim.api.nvim_command('highlight LineNr guifg=#b0b0b0')
 vim.api.nvim_command('set nowrap')
 g.netrw_banner = 0
