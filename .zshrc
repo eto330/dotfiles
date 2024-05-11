@@ -72,7 +72,7 @@ ZSH_THEME="wuffers"
 # Custom plugins may be added to $ZSH_CUSTOM/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git)
+plugins=(git colorize )
 
 source $ZSH/oh-my-zsh.sh
 
@@ -125,7 +125,7 @@ function f() {
     DIR=$(find . -type d | fzf)
     cd "$DIR" || return 1
 }
-# eval "$(starship init zsh)"
+eval "$(starship init zsh)"
 export PATH=:/home/bob/bin:/usr/sbin/:/home/bob/bin:/usr/sbin/:/usr/local/bin:/usr/bin:/bin:/usr/local/games:/usr/games
 export DOCKER_HOST=unix:///run/user/1000/docker.sock
 fastfetch  --logo-color-1 32 -l /home/bob/.config/fastfetch/bio-hazard.txt

@@ -122,30 +122,37 @@ colors:
 
 
   primary:
-    background: '#000000'
-    foreground: '#d8dee9'
+    background: '#101010'
+    foreground: '#98d1ce'
 
-  # Normal colors
-  normal:
-    black: '0x000000'
-    red: '0xec8e2c'
-    green: '0x58a6ff'
-    yellow: '0xd29922'
-    blue: '0x58a6ff'
-    magenta: '0xbc8cff'
-    cyan: '0x39c5cf'
-    white: '0xb1bac4'
+# Colors (Gotham)
+  colors:
+    # Default colors
+    primary:
+      background: '#080808'
+      foreground: '#98d1ce'
 
-  # Bright colors
-  bright:
-    black: '0x6e7681'
-    red: '0xfdac54'
-    green: '0x79c0ff'
-    yellow: '0xe3b341'
-    blue: '0x79c0ff'
-    magenta: '0xbc8cff'
-    cyan: '0x39c5cf'
-    white: '0xb1bac4'
+    # Normal colors
+    normal:
+      black: '#0a0f14'
+      red: '#c33027'
+      green: '#26a98b'
+      yellow: '#edb54b'
+      blue: '#195465'
+      magenta: '#4e5165'
+      cyan: '#33859d'
+      white: '#98d1ce'
+
+    # Bright colors
+    bright:
+      black: '#10151b'
+      red: '#d26939'
+      green: '#081f2d'
+      yellow: '#245361'
+      blue: '#093748'
+      magenta: '#888ba5'
+      cyan: '#599caa'
+      white: '#d3ebe9'
 
 
 

@@ -64,7 +64,7 @@ o.swapfile = false
 
 -- Remember 50 items in commandline history
 o.history = 50
-vim.cmd.colorscheme('forest_stream')
+vim.cmd.colorscheme('radioactive_waste')
 --vim.api.nvim_command('highlight Comment guibg=#333333 guifg=#b58900')
 vim.api.nvim_command('highlight Search guifg=black guibg=yellow')
 vim.api.nvim_command('highlight IncSearch guifg=white guibg=red')
