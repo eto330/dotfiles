@@ -44,7 +44,12 @@ window:
     instance: Alacritty
     # General application class
     general: Alacritty
-
+shell:
+  program: /usr/bin/zsh
+  args:
+    - -l
+    - -c
+    - "tmux attach || tmux"
   # GTK theme variant (Linux/BSD only)
   #
   # Override the variant of the GTK theme. Commonly supported values are `dark` and `light`.

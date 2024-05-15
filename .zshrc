@@ -116,9 +116,13 @@ alias ll='ls --color=auto -l'
 alias la='ls --color=auto -la'
 alias config='/usr/bin/git --git-dir=$HOME/dotfiles.git/ --work-tree=$HOME' 
 alias tm='tmux'
-alias zl='/snap/bin/zellij'
-alias startvm="VBoxManage startvm {276da368-9624-4b49-838c-4c57920caad1} --type headless" 
-alias disablevm="VBoxManage controlvm {276da368-9624-4b49-838c-4c57920caad1} savestate" 
+alias ms='msfconsole'
+
+alias startvm1="VBoxManage startvm {276da368-9624-4b49-838c-4c57920caad1} --type headless" 
+alias disablevm1="VBoxManage controlvm {276da368-9624-4b49-838c-4c57920caad1} savestate" 
+
+alias startvm2="VBoxManage startvm {9b9f33f5-5405-4d82-b1f2-d1fad52fbc66} --type headless"
+alias disablevm2="VBoxManage controlvm {9b9f33f5-5405-4d82-b1f2-d1fad52fbc66} savestate" 
 
 function f() {
     local DIR

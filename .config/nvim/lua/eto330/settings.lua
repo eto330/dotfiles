@@ -82,6 +82,7 @@ o.splitbelow = true
 g.do_filetype_lua = 1
 g.mapleader = ' '
 g.maplocalleader = ' '
+vim.api.nvim_command('highlight StatusLine guibg=#838996 guifg=#333333')
 
 vim.api.nvim_create_autocmd('TextYankPost', {
   group = vim.api.nvim_create_augroup('highlight_yank', {}),
