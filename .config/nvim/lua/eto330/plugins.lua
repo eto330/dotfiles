@@ -48,4 +48,5 @@ return require("packer").startup(function(use)
               {'rafamadriz/friendly-snippets'},
           }
       }
-end)
+      use 'Exafunction/codeium.vim'
+  end)

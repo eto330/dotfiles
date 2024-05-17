@@ -65,7 +65,7 @@ floating_modifier $mod
 bindsym $mod+Return exec /usr/bin/alacritty -o font.size=17
 
 # start the browser
-bindsym $mod+b exec firefox
+bindsym $mod+b exec google-chrome
 
 
 set $fn eDP-1
