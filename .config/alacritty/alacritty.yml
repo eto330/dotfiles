@@ -15,7 +15,7 @@ env:
 
 window:
   dynamic_title: true
-  opacity: 1.0
+  opacity: 1.8
 
   # Window position (changes require restart)
   #
@@ -46,10 +46,7 @@ window:
     general: Alacritty
 shell:
   program: /usr/bin/zsh
-  args:
-    - -l
-    - -c
-    - "tmux attach || tmux"
+  program: /usr/bin/tmux
   # GTK theme variant (Linux/BSD only)
   #
   # Override the variant of the GTK theme. Commonly supported values are `dark` and `light`.
@@ -127,9 +124,8 @@ colors:
 
 
   primary:
-    background: '#101010'
-    foreground: '#98d1ce'
-
+    background: '#000000'
+    foreground: '#84c137'
 # Colors (Gotham)
   colors:
     # Default colors

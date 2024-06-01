@@ -6,7 +6,9 @@ export ZSH="$HOME/.oh-my-zsh"
 export PATH=/usr/sbin/:$PATH
 export PATH=/home/bob/bin:$PATH
 export DOCKER_HOST=unix:///run/user/1000/docker.sock
-# export DOCKER_HOST=unix:///run/user/1000/docker.sock
+export PATH=:/home/bob/bin:/usr/sbin/:/home/bob/bin:/usr/sbin/:/usr/local/bin:/usr/bin:/bin:/usr/local/games:/usr/games
+export DOCKER_CONTENT_TRUST=1
+export DOCKER_HOST=unix:///run/user/1000/docker.sock
 # Set name of the theme to load --- if set to "random", it will
 # load a random theme each time oh-my-zsh is loaded, in which case,
 # to know which specific one was loaded, run: echo $RANDOM_THEME
@@ -117,6 +119,10 @@ alias la='ls --color=auto -la'
 alias config='/usr/bin/git --git-dir=$HOME/dotfiles.git/ --work-tree=$HOME' 
 alias tm='tmux'
 alias ms='msfconsole'
+alias venv='source /home/bob/personal/python-project/sysadmin-projects/admin-scripts-env/bin/activate'
+alias sys='systemctl'
+
+
 
 alias startvm1="VBoxManage startvm {276da368-9624-4b49-838c-4c57920caad1} --type headless" 
 alias disablevm1="VBoxManage controlvm {276da368-9624-4b49-838c-4c57920caad1} savestate" 
@@ -129,8 +135,9 @@ function f() {
     DIR=$(find . -type d | fzf)
     cd "$DIR" || return 1
 }
+
 eval "$(starship init zsh)"
-export PATH=:/home/bob/bin:/usr/sbin/:/home/bob/bin:/usr/sbin/:/usr/local/bin:/usr/bin:/bin:/usr/local/games:/usr/games
-export DOCKER_HOST=unix:///run/user/1000/docker.sock
 fastfetch  --logo-color-1 32 -l /home/bob/.config/fastfetch/bio-hazard.txt
-export DOCKER_CONTENT_TRUST=1
+
+eval "$(dircolors)"
+export LS_COLORS=$LS_COLORS:'di=30;41'

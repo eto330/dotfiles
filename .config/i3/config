@@ -62,10 +62,10 @@ font pango:DejaVu Sans Mono 8
 floating_modifier $mod
 
 # start a terminal
-bindsym $mod+Return exec /usr/bin/alacritty -o font.size=14
+bindsym $mod+Return exec /usr/bin/alacritty -o font.size=16
 
 # start the browser
-bindsym $mod+b exec google-chrome
+bindsym $mod+b exec firefox
 
 
 set $fn eDP-1
@@ -227,5 +227,5 @@ bar {
 # Start i3bar to display a workspace bar (plus the system information i3status
 # finds out, if available)
 client.focused          #2e3436 #2e3436 #ffffff #2e3436   #2e3436
-exec_always --no-startup-id feh --bg-scale $HOME/Pictures/color-river.jpg
-# exec_always picom
+exec_always --no-startup-id feh --bg-fill $HOME/personal/pexels-stywo-1054218.jpg
+#exec_always picom
