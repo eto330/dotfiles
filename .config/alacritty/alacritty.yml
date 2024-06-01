@@ -100,7 +100,7 @@ live_config_reload: true
 
 
 working_directory: None
-
+save_to_clipboard: true
 
 mouse:
   double_click: { threshold: 300 }
@@ -111,9 +111,6 @@ mouse_bindings:
 
 key_bindings:
   # (Windows, Linux, and BSD only)
-  - { key: P,           mods: Alt,        action: Paste            }
-  - { key: Slash,    mods: Control,       chars: "gc"              }
-  - { key: Y,           mods: Alt,        action: Copy}
   - { key: Key0,     mods: Control,       action: ResetFontSize    }
   - { key: Equals,   mods: Control,       action: IncreaseFontSize }
   - { key: Plus,     mods: Control,       action: IncreaseFontSize }
@@ -122,40 +119,33 @@ key_bindings:
 colors:
   transparent_background_colors: true
 
-
+colors:
+  name: Gotham
+  author: whatyouhide
   primary:
-    background: '#000000'
-    foreground: '#84c137'
-# Colors (Gotham)
-  colors:
-    # Default colors
-    primary:
-      background: '#080808'
-      foreground: '#98d1ce'
-
-    # Normal colors
-    normal:
-      black: '#0a0f14'
-      red: '#c33027'
-      green: '#26a98b'
-      yellow: '#edb54b'
-      blue: '#195465'
-      magenta: '#4e5165'
-      cyan: '#33859d'
-      white: '#98d1ce'
-
-    # Bright colors
-    bright:
-      black: '#10151b'
-      red: '#d26939'
-      green: '#081f2d'
-      yellow: '#245361'
-      blue: '#093748'
-      magenta: '#888ba5'
-      cyan: '#599caa'
-      white: '#d3ebe9'
-
-
+    background: "#080808"
+    foreground: "#98d1ce"
+  cursor:
+    text: "#0a0f14"
+    cursor: "#98d1ce"
+  normal:
+    black: "#0a0f14"
+    red: "#c33027"
+    green: "#26a98b"
+    yellow: "#edb54b"
+    blue: "#195465"
+    magenta: "#4e5165"
+    cyan: "#33859d"
+    white: "#98d1ce"
+  bright:
+    black: "#10151b"
+    red: "#d26939"
+    green: "#081f2d"
+    yellow: "#245361"
+    blue: "#093748"
+    magenta: "#888ba5"
+    cyan: "#599caa"
+    white: "#d3ebe9"
 
 debug:
   # Display the time it takes to redraw each frame.

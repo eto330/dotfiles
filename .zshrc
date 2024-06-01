@@ -9,6 +9,7 @@ export DOCKER_HOST=unix:///run/user/1000/docker.sock
 export PATH=:/home/bob/bin:/usr/sbin/:/home/bob/bin:/usr/sbin/:/usr/local/bin:/usr/bin:/bin:/usr/local/games:/usr/games
 export DOCKER_CONTENT_TRUST=1
 export DOCKER_HOST=unix:///run/user/1000/docker.sock
+export LS_COLORS=$LS_COLORS:'di=30;41'
 # Set name of the theme to load --- if set to "random", it will
 # load a random theme each time oh-my-zsh is loaded, in which case,
 # to know which specific one was loaded, run: echo $RANDOM_THEME
@@ -45,7 +46,7 @@ ZSH_THEME="wuffers"
 # DISABLE_AUTO_TITLE="true"
 
 # Uncomment the following line to enable command auto-correction.
-# ENABLE_CORRECTION="true"
+ENABLE_CORRECTION="true"
 
 # Uncomment the following line to display red dots whilst waiting for completion.
 # You can also set it to another string to have that shown instead of the default red dots.
@@ -86,11 +87,6 @@ source $ZSH/oh-my-zsh.sh
 # export LANG=en_US.UTF-8
 
 # Preferred editor for local and remote sessions
-# if [[ -n $SSH_CONNECTION ]]; then
-#   export EDITOR='vim'
-# else
-#   export EDITOR='mvim'
-# fi
 
 # Compilation flags
 # export ARCHFLAGS="-arch x86_64"
@@ -123,6 +119,14 @@ alias venv='source /home/bob/personal/python-project/sysadmin-projects/admin-scr
 alias sys='systemctl'
 
 
+# Custom widget to paste from clipboard
+function zle-paste-clipboard() {
+    LBUFFER+=$(xclip -selection clipboard -o)
+}
+
+# Bind the custom widget to the 'p' key in vi command mode
+zle -N zle-paste-clipboard
+bindkey -M vicmd 'p' zle-paste-clipboard
 
 alias startvm1="VBoxManage startvm {276da368-9624-4b49-838c-4c57920caad1} --type headless" 
 alias disablevm1="VBoxManage controlvm {276da368-9624-4b49-838c-4c57920caad1} savestate" 
@@ -137,7 +141,3 @@ function f() {
 }
 
 eval "$(starship init zsh)"
-fastfetch  --logo-color-1 32 -l /home/bob/.config/fastfetch/bio-hazard.txt
-
-eval "$(dircolors)"
-export LS_COLORS=$LS_COLORS:'di=30;41'
