@@ -107,4 +107,4 @@ vim.api.nvim_create_autocmd('TextYankPost', {
         vim.highlight.on_yank { higroup = 'IncSearch', timeout = 150 }
     end,
 })
-vim.api.nvim_command('highlight Normal guibg=#080808')
+vim.api.nvim_command('highlight Normal guibg=#0a0f14')

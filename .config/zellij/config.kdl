@@ -132,7 +132,7 @@ keybinds {
         }
     }
     tmux {
-        bind "[" { SwitchToMode "Scroll"; }
+        bind "v" { SwitchToMode "Scroll"; }
         bind "Ctrl a" { Write 2; SwitchToMode "Normal"; }
         bind "\"" { NewPane "Down"; SwitchToMode "Normal"; }
         bind "%" { NewPane "Right"; SwitchToMode "Normal"; }

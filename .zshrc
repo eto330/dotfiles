@@ -4,12 +4,13 @@
 # Path to your oh-my-zsh installation.
 export ZSH="$HOME/.oh-my-zsh"
 export PATH=/usr/sbin/:$PATH
-export PATH=/home/bob/bin:$PATH
+export PATH=
 export DOCKER_HOST=unix:///run/user/1000/docker.sock
-export PATH=:/home/bob/bin:/usr/sbin/:/home/bob/bin:/usr/sbin/:/usr/local/bin:/usr/bin:/bin:/usr/local/games:/usr/games
+export PATH=:/home/bob/bin:/usr/sbin/:/home/bob/bin:/usr/sbin/:/usr/local/bin:/usr/bin:/bin:/usr/local/games:/usr/games/
 export DOCKER_CONTENT_TRUST=1
 export DOCKER_HOST=unix:///run/user/1000/docker.sock
 export LS_COLORS=$LS_COLORS:'di=30;41'
+export DOCKER_CONTENT_TRUST=0
 # Set name of the theme to load --- if set to "random", it will
 # load a random theme each time oh-my-zsh is loaded, in which case,
 # to know which specific one was loaded, run: echo $RANDOM_THEME
@@ -75,7 +76,7 @@ ENABLE_CORRECTION="true"
 # Custom plugins may be added to $ZSH_CUSTOM/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git colorize )
+plugins=(git colorize systemd)
 
 source $ZSH/oh-my-zsh.sh
 
@@ -138,6 +139,15 @@ function f() {
     local DIR
     DIR=$(find . -type d | fzf)
     cd "$DIR" || return 1
+}
+
+
+# Adds a puts vim inside the current directory
+function vf() {
+    local DIR
+    DIR=$(find . -type d | fzf)
+    cd "$DIR" || return 1
+    nvim .
 }
 
 eval "$(starship init zsh)"
