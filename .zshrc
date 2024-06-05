@@ -141,13 +141,12 @@ function f() {
     cd "$DIR" || return 1
 }
 
-
-# Adds a puts vim inside the current directory
 function vf() {
-    local DIR
-    DIR=$(find . -type d | fzf)
-    cd "$DIR" || return 1
-    nvim .
+    # Generate a unique name based on timestamp
+    WINDOW_NAME=PROGRAMMING$(date +%s)
+
+    # Create a new window with a unique name and run the command
+    tmux new-window -n $WINDOW_NAME \; send-keys 'DIR=$(find . -type d | fzf); cd "$DIR" || return 1; nvim .' C-m
 }
 
 eval "$(starship init zsh)"
