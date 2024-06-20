@@ -116,36 +116,34 @@ key_bindings:
   - { key: Plus,     mods: Control,       action: IncreaseFontSize }
   - { key: Minus,    mods: Control,       action: DecreaseFontSize }
 
+# Colors (Blood Moon)
 colors:
-  transparent_background_colors: true
-
-colors:
-  name: Gotham
-  author: whatyouhide
+  # Default colors
   primary:
-    background: "#080808"
-    foreground: "#98d1ce"
-  cursor:
-    text: "#0a0f14"
-    cursor: "#98d1ce"
+    background: '0x080808'
+    foreground: '0xC6C6C4'
+
+  # Normal colors
   normal:
-    black: "#0a0f14"
-    red: "#c33027"
-    green: "#26a98b"
-    yellow: "#edb54b"
-    blue: "#195465"
-    magenta: "#4e5165"
-    cyan: "#33859d"
-    white: "#98d1ce"
+    black:   '0x10100E'
+    red:     '0xC40233'
+    green:   '0x009F6B'
+    yellow:  '0xFFD700'
+    blue:    '0x0087BD'
+    magenta: '0x9A4EAE'
+    cyan:    '0x20B2AA'
+    white:   '0xC6C6C4'
+
+  # Bright colors
   bright:
-    black: "#10151b"
-    red: "#d26939"
-    green: "#081f2d"
-    yellow: "#245361"
-    blue: "#093748"
-    magenta: "#888ba5"
-    cyan: "#599caa"
-    white: "#d3ebe9"
+    black:   '0x696969'
+    red:     '0xFF2400'
+    green:   '0x03C03C'
+    yellow:  '0xFDFF00'
+    blue:    '0x007FFF'
+    magenta: '0xFF1493'
+    cyan:    '0x00CCCC'
+    white:   '0xFFFAFA'
 
 debug:
   # Display the time it takes to redraw each frame.

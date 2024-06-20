@@ -76,7 +76,7 @@ ENABLE_CORRECTION="true"
 # Custom plugins may be added to $ZSH_CUSTOM/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git colorize systemd)
+plugins=(git colorize systemd zsh-autosuggestions)
 
 source $ZSH/oh-my-zsh.sh
 
@@ -141,12 +141,13 @@ function f() {
     cd "$DIR" || return 1
 }
 
-function vf() {
+function fv() {
     # Generate a unique name based on timestamp
-    WINDOW_NAME=PROGRAMMING$(date +%s)
+    WINDOW_NAME=PROJECT:$(date +%s)
 
     # Create a new window with a unique name and run the command
     tmux new-window -n $WINDOW_NAME \; send-keys 'DIR=$(find . -type d | fzf); cd "$DIR" || return 1; nvim .' C-m
 }
 
+fastfetch
 eval "$(starship init zsh)"
