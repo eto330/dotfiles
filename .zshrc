@@ -149,5 +149,8 @@ function fv() {
     tmux new-window -n $WINDOW_NAME \; send-keys 'DIR=$(find . -type d | fzf); cd "$DIR" || return 1; nvim .' C-m
 }
 
+if [[ $TERM_PROGRAM == "alacritty" ]]; then
+    xset r rate 250 30
+fi
 fastfetch
 eval "$(starship init zsh)"
