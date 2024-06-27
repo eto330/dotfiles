@@ -230,6 +230,7 @@ bar {
 #gaps outer 5px
 
 
+exec --no-startup-id dunst
 output * bg /home/bob/Pictures/color-river.jpg fill
 
 # Start i3bar to display a workspace bar (plus the system information i3status
@@ -237,3 +238,4 @@ output * bg /home/bob/Pictures/color-river.jpg fill
 client.focused          #2e3436 #2e3436 #ffffff #2e3436   #2e3436
 #exec_always --no-startup-id feh --bg-scale $HOME/Pictures/color-river.jpg
 # exec_always picom
+

@@ -150,7 +150,7 @@ function fv() {
 }
 
 if [[ $TERM_PROGRAM == "alacritty" ]]; then
-    xset r rate 250 30
+    xset r rate 200 30
 fi
 fastfetch
 eval "$(starship init zsh)"
