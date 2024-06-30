@@ -11,6 +11,7 @@ export DOCKER_CONTENT_TRUST=1
 export DOCKER_HOST=unix:///run/user/1000/docker.sock
 export LS_COLORS=$LS_COLORS:'di=30;41'
 export DOCKER_CONTENT_TRUST=0
+bindkey -M vicmd 'V' edit-command-line # this remaps `vv` to `V` (but overrides `visual-mode`)
 # Set name of the theme to load --- if set to "random", it will
 # load a random theme each time oh-my-zsh is loaded, in which case,
 # to know which specific one was loaded, run: echo $RANDOM_THEME
@@ -76,7 +77,7 @@ ENABLE_CORRECTION="true"
 # Custom plugins may be added to $ZSH_CUSTOM/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git colorize systemd zsh-autosuggestions)
+plugins=(git colorize systemd zsh-autosuggestions ufw vi-mode)
 
 source $ZSH/oh-my-zsh.sh
 
@@ -107,7 +108,6 @@ source $ZSH/oh-my-zsh.sh
 # Enable vi mode
 bindkey -v
 alias vim='nvim'
-alias vi='nvim'
 alias v='nvim'
 alias ls='ls --color=auto' 
 alias l='ls --color=auto -la'
@@ -134,6 +134,35 @@ alias disablevm1="VBoxManage controlvm {276da368-9624-4b49-838c-4c57920caad1} sa
 
 alias startvm2="VBoxManage startvm {9b9f33f5-5405-4d82-b1f2-d1fad52fbc66} --type headless"
 alias disablevm2="VBoxManage controlvm {9b9f33f5-5405-4d82-b1f2-d1fad52fbc66} savestate" 
+
+
+
+function edit-command-in-nvim {
+    # Temporarily save the current buffer to a file
+    local temp_file=$(mktemp)
+    print -r -- "$BUFFER" > "$temp_file"
+
+    # Open the temp file in Neovim
+    nvim "$temp_file"
+
+    # Read the file back into the buffer
+    BUFFER=$(<"$temp_file")
+
+    # Clean up the temporary file
+    rm "$temp_file"
+
+    # Reset the cursor position
+    CURSOR=${#BUFFER}
+    zle redisplay
+}
+
+# Ensure vi-mode plugin keybindings are loaded
+bindkey -v
+
+# Set the 'vv' binding to use Neovim
+zle -N edit-command-in-nvim
+bindkey -M vicmd 'vv' edit-command-in-nvim
+
 
 function f() {
     local DIR
